@@ -5,7 +5,8 @@ namespace imagemorph {
   //% weight=7 help=sprites/sprite/set-image
   export function morph(mySprite: Sprite, myImage: Image) {
     let pixels_to_change = [];
-    for (let index = 0; index <= 255; index++) {
+    let num_pixels = myImage.width * myImage.height
+    for (let index = 0; index < num_pixels; index++) {
       pixels_to_change.push(index);
     }
     while (pixels_to_change.length > 0) {
