@@ -1,4 +1,4 @@
-//% color=#3d8a59 block="Image Morph"
+//% blockNamespace=sprites color="#3B6FEA" blockGap=8
 namespace imagemorph {
   //% blockId="spritemorphimage"
   //% blockId=spritemorphimage block="morph %sprite(mySprite) image to %img=screen_image_picker"
