@@ -13,9 +13,9 @@ namespace imagemorph {
       let random_pixel = pixels_to_change.removeAt(
         randint(0, pixels_to_change.length - 1)
       );
-      let row = Math.floor(random_pixel / 16);
-      let column = random_pixel % 16;
-      mySprite.image.setPixel(column, row, myImage.getPixel(column, row));
+      let y = Math.floor(random_pixel / myImage.height);
+      let x = random_pixel % myImage.width;
+      mySprite.image.setPixel(x, y, myImage.getPixel(x, y));
       pause(0.01);
     }
   }
