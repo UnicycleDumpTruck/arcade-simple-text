@@ -14,7 +14,7 @@ namespace imagemorph {
     console.log(myImage.height);
 
     let pixels_to_change = [];
-    let num_pixels = myImage.width * myImage.height
+    let num_pixels = myImage.width * myImage.height;
     for (let index = 0; index < num_pixels; index++) {
       pixels_to_change.push(index);
     }
@@ -22,8 +22,8 @@ namespace imagemorph {
       let random_pixel = pixels_to_change.removeAt(
         randint(0, pixels_to_change.length - 1)
       );
-      let y = Math.floor(random_pixel / myImage.height);
-      let x = random_pixel % myImage.height;
+      let y = Math.floor(random_pixel / myImage.width);
+      let x = random_pixel % myImage.width;
       mySprite.image.setPixel(x, y, myImage.getPixel(x, y));
       pause(0.01);
     }
