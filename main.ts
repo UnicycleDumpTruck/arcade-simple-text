@@ -13,8 +13,8 @@ namespace imagemorph {
       let random_pixel = pixels_to_change.removeAt(
         randint(0, pixels_to_change.length - 1)
       );
-      let y = Math.floor(random_pixel / myImage.width);
-      let x = random_pixel % myImage.height;
+      let x = Math.floor(random_pixel / myImage.height);
+      let y = random_pixel % myImage.width;
       mySprite.image.setPixel(x, y, myImage.getPixel(x, y));
       pause(0.01);
     }
