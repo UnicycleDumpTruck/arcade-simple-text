@@ -1,7 +1,7 @@
 //% color=#3d8a59 block="Text Sprites"
 namespace simpleText {
     //% blockId="simple_text_create_text"
-    //% block="create text sprite $text with foreground $foreground background $background and kind $kind"
+    //% block="create text sprite $text with foregound $foreground background $background and kind $kind"
     //% kind.shadow=spritekind
     //% foreground.shadow=colorindexpicker
     //% foreground.defl=1
