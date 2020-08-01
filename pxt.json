@@ -1,6 +1,6 @@
 {
-    "name": "arcade-simple-text",
-    "version": "0.1.0",
+    "name": "pxt-image-morph",
+    "version": "0.1.3",
     "description": "",
     "dependencies": {
         "device": "*"
