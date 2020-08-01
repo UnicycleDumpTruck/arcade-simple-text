@@ -4,6 +4,15 @@ namespace imagemorph {
   //% blockId=spritemorphimage block="morph %sprite(mySprite) image to %img=screen_image_picker"
   //% weight=7 help=sprites/sprite/set-image
   export function morph(mySprite: Sprite, myImage: Image) {
+    console.log("sprite width");
+    console.log(mySprite.image.width);
+    console.log("sprite height");
+    console.log(mySprite.image.height);
+    console.log("img width");
+    console.log(myImage.width);
+    console.log("img height");
+    console.log(myImage.height);
+
     let pixels_to_change = [];
     let num_pixels = myImage.width * myImage.height
     for (let index = 0; index < num_pixels; index++) {
