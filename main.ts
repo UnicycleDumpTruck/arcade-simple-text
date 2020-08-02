@@ -23,7 +23,7 @@ namespace imagemorph {
     
     
     while (pixels_to_change.length > 100) {
-      let group_size = Math.floor(pixels_to_change.length/80)
+      let group_size = Math.floor(pixels_to_change.length/50)
       for (let index = 0; index < 2; index++) {
         transferPixel(mySprite, myImage, pixels_to_change);
       }
