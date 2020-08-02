@@ -21,8 +21,13 @@ namespace imagemorph {
       pixels_to_change.push(index);
     }
     
-    while (pixels_to_change.length > 500) {
-      transferPixel(mySprite, myImage, pixels_to_change);
+    
+    while (pixels_to_change.length > 100) {
+      let group_size = Math.floor(pixels_to_change.length/100)
+      for (let index = 0; index < 2; index++) {
+        transferPixel(mySprite, myImage, pixels_to_change);
+      }
+      pause(0.01);
     }
 
     while (pixels_to_change.length > 0) {
