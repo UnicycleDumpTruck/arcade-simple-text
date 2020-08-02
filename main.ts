@@ -1,6 +1,5 @@
-//% blockNamespace=sprites color="#3B6FEA" blockGap=8
 namespace imagemorph {
-  export function transferPixel(mySprite: Sprite, myImage: Image, pixel_array: Array) {
+  export function transferPixel(mySprite: Sprite, myImage: Image, pixel_array: number[]) {
       let random_pixel = pixel_array.removeAt(
         randint(0, pixel_array.length - 1)
       );
@@ -9,7 +8,6 @@ namespace imagemorph {
       mySprite.image.setPixel(x, y, myImage.getPixel(x, y));
     }
 
-  
   
   //% blockId="spritemorphimage"
   //% blockId=spritemorphimage block="morph %sprite(mySprite) image to %img=screen_image_picker"
@@ -24,16 +22,16 @@ namespace imagemorph {
     }
     
     while (pixels_to_change.length > 500) {
-      transfer_pixel(mySprite, myImage, pixels_to_change);
+      transferPixel(mySprite, myImage, pixels_to_change);
     }
 
     while (pixels_to_change.length > 0) {
-      let random_pixel = pixels_to_change.removeAt(
+      let random_pixel2 = pixels_to_change.removeAt(
         randint(0, pixels_to_change.length - 1)
       );
-      let y = Math.floor(random_pixel / myImage.width);
-      let x = random_pixel % myImage.width;
-      mySprite.image.setPixel(x, y, myImage.getPixel(x, y));
+      let y2 = Math.floor(random_pixel2 / myImage.width);
+      let x2 = random_pixel2 % myImage.width;
+      mySprite.image.setPixel(x2, y2, myImage.getPixel(x2, y2));
       pause(0.01);
     }
   }
